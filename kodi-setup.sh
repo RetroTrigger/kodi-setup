@@ -26,3 +26,5 @@ cp -r lightdm.conf /etc/lightdm/lightdm.conf
 
 # Install Moonlight
 flatpak install flathub com.moonlight_stream.Moonlight
+
+sudo reboot
