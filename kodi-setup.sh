@@ -10,7 +10,7 @@ sudo add-apt-repository ppa:team-xbmc/ppa -y
 
 # Get the latest package lists and install the programs
 sudo apt-get update -y
-sudo apt-get install kodi openbox lightdm unzip flatpak -y
+sudo apt-get install kodi openbox lightdm unzip flatpak hsetroot -y
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo -y
 
 # Install Kodi-Openbox Xsession
@@ -26,5 +26,9 @@ cp -r lightdm.conf /etc/lightdm/lightdm.conf
 
 # Install Moonlight
 flatpak install flathub com.moonlight_stream.Moonlight
+
+#Add Autostart.sh For Openbox
+cd ~/kodi-setup
+cp -r autostart.sh ~/.config/openbox/autostart.sh
 
 sudo reboot
